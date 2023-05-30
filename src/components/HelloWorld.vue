@@ -1,16 +1,18 @@
 <script setup lang="ts">
 defineProps<{
-  msg: string
+  name: string
+  titulo: string
 }>()
 </script>
 
 <template>
   <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
+    <h1 class="green">{{ name }}</h1>
+    <h2 class="name">{{ titulo }}</h2>
     <h3>
-      You’ve successfully created a project with
-      <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> +
-      <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>. What's next?
+      Esta é a minha mensagem <br>
+      <a href="https://alvdelci.github.io" target="_blank" rel="noopener">Link meu site</a>.
+      <a href="https://github.com/alvdelci" target="_blank" rel="noopener">Link para meu GitHub</a>.
     </h3>
   </div>
 </template>
@@ -22,8 +24,16 @@ h1 {
   top: -10px;
 }
 
+h2 {
+  color: purple;
+}
+
 h3 {
   font-size: 1.2rem;
+}
+
+a {
+  text-decoration: underline;
 }
 
 .greetings h1,
